@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.foodsafetykorea.go.kr)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)",
+      "Bash(rmdir:*)",
+      "Bash(rm:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:www.data.go.kr)",
+      "mcp__smithery-ai-server-sequential-thinking__sequentialthinking"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
