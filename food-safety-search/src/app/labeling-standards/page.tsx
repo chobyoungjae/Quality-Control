@@ -7773,6 +7773,12 @@ const LABELING_STANDARDS = {
 export default function LabelingStandards() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedType, setSelectedType] = useState<string | null>(null);
+  
+  // 식품공전 API 관련 상태
+  const [foodCodeSearchTerm, setFoodCodeSearchTerm] = useState('');
+  const [foodCodeResults, setFoodCodeResults] = useState<any[]>([]);
+  const [isLoadingFoodCode, setIsLoadingFoodCode] = useState(false);
+  const [foodCodeError, setFoodCodeError] = useState('');
 
   // 검색어에 따른 식품 유형 필터링
   const filteredFoodTypes = useMemo(() => {
@@ -7786,6 +7792,61 @@ export default function LabelingStandards() {
   const handleSelectType = (type: string) => {
     setSelectedType(type);
     setSearchTerm(type);
+  };
+
+  // 식품공전 API 호출 함수
+  const searchFoodCodeAPI = async (searchQuery: string) => {
+    if (!searchQuery.trim()) {
+      setFoodCodeError('검색어를 입력해주세요.');
+      return;
+    }
+
+    setIsLoadingFoodCode(true);
+    setFoodCodeError('');
+    setFoodCodeResults([]);
+
+    try {
+      // 식품공전 인증키
+      const API_KEY = '689a583b18ee4d40b6e3';
+      const SERVICE_ID = 'I0930';
+      const DATA_TYPE = 'json';
+      const START_IDX = 1;
+      const END_IDX = 10;
+      
+      // 식품공전 API 호출
+      const url = `http://openapi.foodsafetykorea.go.kr/api/${API_KEY}/${SERVICE_ID}/${DATA_TYPE}/${START_IDX}/${END_IDX}/PRDLST_NM=${encodeURIComponent(searchQuery)}`;
+      
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`API 호출 실패: ${response.status}`);
+      }
+
+      const data = await response.json();
+      
+      // API 응답 구조에 따라 조정 필요
+      if (data[SERVICE_ID] && data[SERVICE_ID].row) {
+        setFoodCodeResults(data[SERVICE_ID].row);
+      } else {
+        setFoodCodeResults([]);
+        setFoodCodeError('검색 결과가 없습니다.');
+      }
+    } catch (error) {
+      console.error('식품공전 API 호출 오류:', error);
+      setFoodCodeError('API 호출 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+    } finally {
+      setIsLoadingFoodCode(false);
+    }
+  };
+
+  // 식품공전 검색 핸들러
+  const handleFoodCodeSearch = () => {
+    searchFoodCodeAPI(foodCodeSearchTerm);
   };
 
   return (
@@ -7851,6 +7912,103 @@ export default function LabelingStandards() {
               <p className="text-yellow-800">
                 "{searchTerm}"에 해당하는 식품 유형을 찾을 수 없습니다.
               </p>
+            </div>
+          )}
+        </div>
+
+        {/* 식품공전 API 검색 섹션 */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            🔍 식품공전 규격기준 검색
+          </h2>
+          <p className="text-gray-600 mb-4">
+            식품공전에서 제공하는 공식 규격기준 정보를 검색할 수 있습니다.
+          </p>
+          
+          <div className="flex gap-3">
+            <input
+              type="text"
+              value={foodCodeSearchTerm}
+              onChange={(e) => setFoodCodeSearchTerm(e.target.value)}
+              placeholder="품목명을 입력하세요 (예: 라면, 우유, 김치)"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-lg"
+              onKeyPress={(e) => e.key === 'Enter' && handleFoodCodeSearch()}
+            />
+            <button
+              onClick={handleFoodCodeSearch}
+              disabled={isLoadingFoodCode}
+              className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+            >
+              {isLoadingFoodCode ? '검색중...' : '검색'}
+            </button>
+          </div>
+
+          {/* 에러 메시지 */}
+          {foodCodeError && (
+            <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+              <p className="text-red-800">{foodCodeError}</p>
+            </div>
+          )}
+
+          {/* 검색 결과 */}
+          {foodCodeResults.length > 0 && (
+            <div className="mt-6">
+              <h3 className="text-lg font-bold text-gray-800 mb-4">
+                검색 결과 ({foodCodeResults.length}건)
+              </h3>
+              <div className="space-y-4 max-h-96 overflow-y-auto">
+                {foodCodeResults.map((item, index) => (
+                  <div key={index} className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <h4 className="font-bold text-gray-800 mb-2">
+                      {item.PRDLST_NM || '품목명 없음'}
+                    </h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                      {item.TEST_KOR_NM && (
+                        <div>
+                          <span className="font-medium text-gray-600">시험항목:</span>
+                          <span className="ml-2 text-gray-800">{item.TEST_KOR_NM}</span>
+                        </div>
+                      )}
+                      {item.FNPRT_ITM_NM && (
+                        <div>
+                          <span className="font-medium text-gray-600">세부항목:</span>
+                          <span className="ml-2 text-gray-800">{item.FNPRT_ITM_NM}</span>
+                        </div>
+                      )}
+                      {item.SPEC_VAL && (
+                        <div>
+                          <span className="font-medium text-gray-600">기준규격값:</span>
+                          <span className="ml-2 text-gray-800">{item.SPEC_VAL}</span>
+                        </div>
+                      )}
+                      {item.UNIT_NM && (
+                        <div>
+                          <span className="font-medium text-gray-600">단위:</span>
+                          <span className="ml-2 text-gray-800">{item.UNIT_NM}</span>
+                        </div>
+                      )}
+                      {item.VALD_BEGN_DT && (
+                        <div>
+                          <span className="font-medium text-gray-600">유효개시일:</span>
+                          <span className="ml-2 text-gray-800">{item.VALD_BEGN_DT}</span>
+                        </div>
+                      )}
+                      {item.VALD_END_DT && (
+                        <div>
+                          <span className="font-medium text-gray-600">유효종료일:</span>
+                          <span className="ml-2 text-gray-800">{item.VALD_END_DT}</span>
+                        </div>
+                      )}
+                    </div>
+                    {item.SPEC_VAL_SUMUP && (
+                      <div className="mt-3 p-3 bg-blue-50 rounded border-l-4 border-blue-400">
+                        <span className="font-medium text-blue-800">규격값 요약:</span>
+                        <p className="text-blue-700 mt-1">{item.SPEC_VAL_SUMUP}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>
