@@ -7794,7 +7794,7 @@ export default function LabelingStandards() {
     setSearchTerm(type);
   };
 
-  // 식품공전 API 호출 함수
+  // 식품공전 API 호출 함수 (서버 API 라우트 사용)
   const searchFoodCodeAPI = async (searchQuery: string) => {
     if (!searchQuery.trim()) {
       setFoodCodeError('검색어를 입력해주세요.');
@@ -7806,17 +7806,8 @@ export default function LabelingStandards() {
     setFoodCodeResults([]);
 
     try {
-      // 식품공전 인증키
-      const API_KEY = '689a583b18ee4d40b6e3';
-      const SERVICE_ID = 'I0930';
-      const DATA_TYPE = 'json';
-      const START_IDX = 1;
-      const END_IDX = 10;
-      
-      // 식품공전 API 호출
-      const url = `http://openapi.foodsafetykorea.go.kr/api/${API_KEY}/${SERVICE_ID}/${DATA_TYPE}/${START_IDX}/${END_IDX}/PRDLST_NM=${encodeURIComponent(searchQuery)}`;
-      
-      const response = await fetch(url, {
+      // Next.js API 라우트 호출
+      const response = await fetch(`/api/food-code?q=${encodeURIComponent(searchQuery)}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -7827,14 +7818,13 @@ export default function LabelingStandards() {
         throw new Error(`API 호출 실패: ${response.status}`);
       }
 
-      const data = await response.json();
+      const result = await response.json();
       
-      // API 응답 구조에 따라 조정 필요
-      if (data[SERVICE_ID] && data[SERVICE_ID].row) {
-        setFoodCodeResults(data[SERVICE_ID].row);
+      if (result.success && result.data) {
+        setFoodCodeResults(result.data);
       } else {
         setFoodCodeResults([]);
-        setFoodCodeError('검색 결과가 없습니다.');
+        setFoodCodeError(result.message || '검색 결과가 없습니다.');
       }
     } catch (error) {
       console.error('식품공전 API 호출 오류:', error);
