@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { integrateSearchResults } from '@/lib/food-codex-data';
 
 export async function GET(request: NextRequest) {
   try {
@@ -39,16 +40,24 @@ export async function GET(request: NextRequest) {
     console.log('API 응답:', data);
     
     // API 응답 구조 확인 및 데이터 추출
-    if (data[SERVICE_ID] && data[SERVICE_ID].row) {
+    const apiResults = data[SERVICE_ID]?.row || [];
+    
+    // 식품공전 조항과 API 결과를 통합
+    const integratedResults = integrateSearchResults(apiResults, searchQuery);
+    
+    if (integratedResults.hasCodexContent || apiResults.length > 0) {
       return NextResponse.json({
         success: true,
-        data: data[SERVICE_ID].row
+        data: apiResults,
+        codexSections: integratedResults.codexSections,
+        hasCodexContent: integratedResults.hasCodexContent
       });
     } else {
       return NextResponse.json({
         success: false,
         message: '검색 결과가 없습니다.',
-        data: []
+        data: [],
+        codexSections: []
       });
     }
     

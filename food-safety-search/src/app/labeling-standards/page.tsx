@@ -7777,6 +7777,7 @@ export default function LabelingStandards() {
   // 식품공전 API 관련 상태
   const [foodCodeSearchTerm, setFoodCodeSearchTerm] = useState('');
   const [foodCodeResults, setFoodCodeResults] = useState<any[]>([]);
+  const [codexSections, setCodexSections] = useState<any[]>([]);
   const [isLoadingFoodCode, setIsLoadingFoodCode] = useState(false);
   const [foodCodeError, setFoodCodeError] = useState('');
 
@@ -7822,8 +7823,10 @@ export default function LabelingStandards() {
       
       if (result.success && result.data) {
         setFoodCodeResults(result.data);
+        setCodexSections(result.codexSections || []);
       } else {
         setFoodCodeResults([]);
+        setCodexSections([]);
         setFoodCodeError(result.message || '검색 결과가 없습니다.');
       }
     } catch (error) {
@@ -7943,8 +7946,25 @@ export default function LabelingStandards() {
           {/* 검색 결과 */}
           {foodCodeResults.length > 0 && (
             <div className="mt-6">
+              {/* 식품공전 통합 조항이 있을 때 먼저 표시 */}
+              {codexSections.length > 0 && (
+                <div className="mb-8">
+                  <h3 className="text-lg font-bold text-gray-800 mb-4">
+                    📖 식품공전 조항
+                  </h3>
+                  {codexSections.map((section, index) => (
+                    <div key={index} className="p-6 bg-blue-50 rounded-lg border-l-4 border-blue-500 mb-4">
+                      <h4 className="text-xl font-bold text-blue-800 mb-4">{section.title}</h4>
+                      <div className="text-gray-800 whitespace-pre-line leading-relaxed">
+                        {section.content}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              
               <h3 className="text-lg font-bold text-gray-800 mb-4">
-                검색 결과 ({foodCodeResults.length}건)
+                {codexSections.length > 0 ? '📊 세부 규격 데이터' : '검색 결과'} ({foodCodeResults.length}건)
               </h3>
               <div className="space-y-4 max-h-96 overflow-y-auto">
                 {foodCodeResults.map((item, index) => (
