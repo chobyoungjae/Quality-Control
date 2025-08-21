@@ -10,7 +10,8 @@
       "Bash(rm:*)",
       "Bash(curl:*)",
       "WebFetch(domain:www.data.go.kr)",
-      "mcp__smithery-ai-server-sequential-thinking__sequentialthinking"
+      "mcp__smithery-ai-server-sequential-thinking__sequentialthinking",
+      "mcp__smithery-sequential-thinking__sequentialthinking"
     ],
     "deny": [],
     "ask": []
