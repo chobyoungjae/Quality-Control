@@ -1,0 +1,1 @@
+<script type="text/javascript">alert('인증키가 유효하지 않습니다. 인증키가 없는 경우,  홈페이지에서 인증키를 신청하십시오.'); history.back();</script>
