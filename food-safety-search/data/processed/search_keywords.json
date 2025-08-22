@@ -1,0 +1,968 @@
+{
+  "keywords": [
+    {
+      "id": 1,
+      "keyword": ". 맞춤형 영양조제식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 2,
+      "keyword": ". 식단형 식사관리식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 3,
+      "keyword": ". 체중조절용 조제식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 4,
+      "keyword": ". 표준형 영양조제식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 5,
+      "keyword": "3)",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 6,
+      "keyword": "3)에 따라 제조한다.",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 7,
+      "keyword": "∼ 11-2의 다른 식품유형에 해당하지 않는 것을 말한다.",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 8,
+      "keyword": "∼ 19-13에 해당하지 않는 것을 말한다.",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 9,
+      "keyword": "∼17-7에 해당되지 않는 것을 말한다.",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 10,
+      "keyword": "∼2-2에 해당되지 아니하는 것을 말한다.",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 11,
+      "keyword": "가공김",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 12,
+      "keyword": "가공유류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 13,
+      "keyword": "건조저장육류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 14,
+      "keyword": "건포류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 15,
+      "keyword": "것을",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 16,
+      "keyword": "견과류가공품류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 17,
+      "keyword": "고령자용",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 18,
+      "keyword": "고령자용 영양조제식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 19,
+      "keyword": "고춧가루",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 20,
+      "keyword": "고춧가루 또는 실고추",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 21,
+      "keyword": "곤충가공식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 22,
+      "keyword": "과당류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 23,
+      "keyword": "과일",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 24,
+      "keyword": "과일･채소류음료",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 25,
+      "keyword": "과일･채소류음료 6) 시험방법",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 26,
+      "keyword": "기타",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 27,
+      "keyword": "기타 농산가공품류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 28,
+      "keyword": "기타 수산물가공품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 29,
+      "keyword": "기타가공품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 30,
+      "keyword": "기타식육",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 31,
+      "keyword": "기타식육 또는 기타알제품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 32,
+      "keyword": "기타알제품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 33,
+      "keyword": "기타음료",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 34,
+      "keyword": "김치류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 35,
+      "keyword": "농산가공품류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 36,
+      "keyword": "농축유류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 37,
+      "keyword": "다류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 38,
+      "keyword": "다른",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 39,
+      "keyword": "당류가공품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 40,
+      "keyword": "당시럽류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 41,
+      "keyword": "동물성유지류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 42,
+      "keyword": "두유류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 43,
+      "keyword": "따라",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 44,
+      "keyword": "땅콩",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 45,
+      "keyword": "땅콩 또는 견과류가공품류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 46,
+      "keyword": "또는",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 47,
+      "keyword": "로열젤리류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 48,
+      "keyword": "만두류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 49,
+      "keyword": "말한다",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 50,
+      "keyword": "맞춤형",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 51,
+      "keyword": "밀가루류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 52,
+      "keyword": "발효유류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 53,
+      "keyword": "발효음료류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 54,
+      "keyword": "발효주류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 55,
+      "keyword": "발효주류, 15-2 증류주류 또는 15-4 주정에 속하지 않는 주류를 말한다.",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 56,
+      "keyword": "버터류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 57,
+      "keyword": "버터유",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 58,
+      "keyword": "벌꿀류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 59,
+      "keyword": "베이컨류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 60,
+      "keyword": "분유류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 61,
+      "keyword": "빙과",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 62,
+      "keyword": "산양유",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 63,
+      "keyword": "생식류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 64,
+      "keyword": "설탕류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 65,
+      "keyword": "성장기용",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 66,
+      "keyword": "성장기용 조제식",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 67,
+      "keyword": "소스류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 68,
+      "keyword": "소시지류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 69,
+      "keyword": "속하지",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 70,
+      "keyword": "수산물가공품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 71,
+      "keyword": "수유부용",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 72,
+      "keyword": "시리얼류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 73,
+      "keyword": "시행일",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 74,
+      "keyword": "시험방법",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 75,
+      "keyword": "식단형",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 76,
+      "keyword": "식물성유지류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 77,
+      "keyword": "식사관리식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 78,
+      "keyword": "식염",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 79,
+      "keyword": "식용유지가공품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 80,
+      "keyword": "식육간편조리세트",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 81,
+      "keyword": "식육추출가공품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 82,
+      "keyword": "식육함유가공품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 83,
+      "keyword": "식초류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 84,
+      "keyword": "식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 85,
+      "keyword": "식품유형에",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 86,
+      "keyword": "실고추",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 87,
+      "keyword": "아니하는",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 88,
+      "keyword": "아이스크림류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 89,
+      "keyword": "아이스크림믹스류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 90,
+      "keyword": "않는",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 91,
+      "keyword": "알가공품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 92,
+      "keyword": "알함유가공품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 93,
+      "keyword": "양념육류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 94,
+      "keyword": "어육가공품류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 95,
+      "keyword": "얼음류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 96,
+      "keyword": "에 해당되지 않는 것을 말한다.",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 97,
+      "keyword": "엿류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 98,
+      "keyword": "영아용",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 99,
+      "keyword": "영아용 조제식",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 100,
+      "keyword": "영양조제식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 101,
+      "keyword": "영･유아용 이유식",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 102,
+      "keyword": "올리고당류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 103,
+      "keyword": "우유류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 104,
+      "keyword": "유단백가수분해식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 105,
+      "keyword": "유당",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 106,
+      "keyword": "유아용",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 107,
+      "keyword": "유청류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 108,
+      "keyword": "유크림류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 109,
+      "keyword": "유함유가공품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 110,
+      "keyword": "이유식",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 111,
+      "keyword": "인삼",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 112,
+      "keyword": "인삼･홍삼음료",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 113,
+      "keyword": "임산",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 114,
+      "keyword": "임산·수유부용 식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 115,
+      "keyword": "자라가공식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 116,
+      "keyword": "전분류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 117,
+      "keyword": "절임류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 118,
+      "keyword": "젓갈류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 119,
+      "keyword": "제조한다",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 120,
+      "keyword": "조림류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 121,
+      "keyword": "조미김",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 122,
+      "keyword": "조제식",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 123,
+      "keyword": "조제식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 124,
+      "keyword": "조제유류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 125,
+      "keyword": "주류를",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 126,
+      "keyword": "주정",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 127,
+      "keyword": "주정에",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 128,
+      "keyword": "즉석섭취",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 129,
+      "keyword": "즉석섭취･편의식품류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 130,
+      "keyword": "증류주류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 131,
+      "keyword": "찐쌀",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 132,
+      "keyword": "채소류음료",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 133,
+      "keyword": "체중조절용",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 134,
+      "keyword": "초콜릿류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 135,
+      "keyword": "추출가공식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 136,
+      "keyword": "치즈류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 137,
+      "keyword": "카레",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 138,
+      "keyword": "커피",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 139,
+      "keyword": "코코아가공품류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 140,
+      "keyword": "탄산음료류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 141,
+      "keyword": "편의식품류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 142,
+      "keyword": "포도당",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 143,
+      "keyword": "포도당 6) 시험방법",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 144,
+      "keyword": "포장육",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 145,
+      "keyword": "표준형",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 146,
+      "keyword": "한천",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 147,
+      "keyword": "해당되지",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 148,
+      "keyword": "해당하지",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 149,
+      "keyword": "햄류",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 150,
+      "keyword": "향신료가공품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 151,
+      "keyword": "호, ‘23.11.28.> [시행일 ‘26.1.1.]",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 152,
+      "keyword": "호, ‘23.8.31>[시행일 : ’25.1.1.]",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 153,
+      "keyword": "호, ‘23.8.31>[시행일 : ’26.1.1.]",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 154,
+      "keyword": "호, ‘24.11.14.> [시행일 : ’26.1.1.]",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 155,
+      "keyword": "호, ‘24.5.17.>[시행일 : ’26.1.1.]",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 156,
+      "keyword": "호, ‘24.5.17>",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 157,
+      "keyword": "홍삼음료",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 158,
+      "keyword": "화분가공식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 159,
+      "keyword": "효모식품",
+      "search_count": 0,
+      "category": "자동추출"
+    },
+    {
+      "id": 160,
+      "keyword": "효소식품",
+      "search_count": 0,
+      "category": "자동추출"
+    }
+  ],
+  "metadata": {
+    "total_keywords": 160,
+    "processed_at": "2025-08-22T17:53:40.139706"
+  }
+}
