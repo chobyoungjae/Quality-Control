@@ -97,6 +97,41 @@ http://openapi.foodsafetykorea.go.kr/api/689a583b18ee4d40b6e3/[서비스ID]/json
 NEXT_PUBLIC_FOOD_SAFETY_API_KEY=689a583b18ee4d40b6e3
 ```
 
+## 텍스트 포맷팅 주의사항 ⚠️
+
+**IMPORTANT: 이미 잘 포맷팅된 데이터를 건드리지 마세요!**
+
+### 문제 사례와 해결책
+
+1. **❌ 잘못된 접근**: 
+   - 이미 줄바꿈이 포함된 올바른 데이터를 포맷팅 함수로 다시 가공
+   - 결과: 모든 줄바꿈이 사라져서 한 줄로 붙어버림
+
+2. **✅ 올바른 접근**:
+   - 원본 데이터가 이미 올바르게 포맷팅되어 있다면 그대로 사용
+   - CSS `whitespace-pre-line`으로 줄바꿈 보존
+   - 포맷팅 함수는 꼭 필요한 경우만 사용
+
+### 코드 적용 원칙
+
+```tsx
+// ❌ 잘못된 방식
+<div className="whitespace-pre-line">
+  {formatFoodCodexStructured(section.content)} {/* 불필요한 가공 */}
+</div>
+
+// ✅ 올바른 방식  
+<div className="whitespace-pre-line">
+  {section.content} {/* 원본 데이터 그대로 */}
+</div>
+```
+
+### 데이터 처리 우선순위
+
+1. **먼저 원본 데이터 확인** - 이미 올바르게 포맷팅되어 있는지 체크
+2. **CSS 적용** - `whitespace-pre-line` 또는 `whitespace-pre-wrap` 사용
+3. **포맷팅 함수는 최후의 수단** - 정말 필요한 경우만 사용
+
 ## 식품안전나라 API 연결 가이드
 
 ### API 키 및 서비스 확인 필수사항
