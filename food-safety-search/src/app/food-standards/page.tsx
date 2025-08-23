@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { formatFoodCodexText, formatSpecValue, formatDate } from '@/lib/text-formatter';
+import { formatFoodCodexText, formatFoodCodexStructured, formatSpecValue, formatDate } from '@/lib/text-formatter';
 
 interface FoodStandardsItem {
   PRDLST_NM?: string;
@@ -231,7 +231,7 @@ export default function FoodStandardsPage() {
                     <div key={index} className="p-6 bg-blue-50 rounded-lg border-l-4 border-blue-500">
                       <h4 className="text-xl font-bold text-blue-800 mb-4">{section.title}</h4>
                       <div className="text-gray-800 whitespace-pre-line leading-relaxed text-sm md:text-base font-mono">
-                        {formatFoodCodexText(section.content)}
+                        {section.content}
                       </div>
                     </div>
                   ))}
@@ -323,8 +323,8 @@ export default function FoodStandardsPage() {
                               <td className="border border-gray-300 px-3 py-2 text-gray-700">
                                 {item.SPEC_VAL_SUMUP ? (
                                   <div className="text-xs bg-blue-50 p-2 rounded border-l-2 border-blue-400">
-                                    <div className="whitespace-pre-wrap break-words leading-relaxed">
-                                      {formatFoodCodexText(item.SPEC_VAL_SUMUP)}
+                                    <div className="whitespace-pre-line break-words leading-relaxed">
+                                      {item.SPEC_VAL_SUMUP}
                                     </div>
                                   </div>
                                 ) : (
