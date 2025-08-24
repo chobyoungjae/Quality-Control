@@ -230,7 +230,7 @@ export default function FoodStandardsPage() {
                   {codexSections.map((section, index) => (
                     <div key={index} className="p-6 bg-blue-50 rounded-lg border-l-4 border-blue-500">
                       <h4 className="text-xl font-bold text-blue-800 mb-4">{section.title}</h4>
-                      <div className="text-gray-800 whitespace-pre-line leading-relaxed text-sm md:text-base font-mono">
+                      <div className="text-gray-800 whitespace-pre-line leading-relaxed text-sm md:text-base">
                         {section.content}
                       </div>
                     </div>
