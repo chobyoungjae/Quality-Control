@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 
 // 식품 유형 데이터 (식품등의 표시기준_2.pdf 22-27페이지 기준)
@@ -7781,6 +7781,31 @@ export default function LabelingStandards() {
   const [isLoadingFoodCode, setIsLoadingFoodCode] = useState(false);
   const [foodCodeError, setFoodCodeError] = useState('');
 
+  
+  // Supabase에서 키워드 자동완성 가져오기
+  useEffect(() => {
+    const fetchSuggestions = async () => {
+      if (!searchTerm.trim() || searchTerm.length < 1) {
+        setSuggestions([]);
+        return;
+      }
+
+      try {
+        const response = await fetch(`/api/food-codex-search?autocomplete=${encodeURIComponent(searchTerm)}`, {
+          method: 'POST'
+        });
+        const data = await response.json();
+        setSuggestions(data.suggestions || []);
+      } catch (err) {
+        console.error('자동완성 오류:', err);
+        setSuggestions([]);
+      }
+    };
+
+    const debounceTimer = setTimeout(fetchSuggestions, 300);
+    return () => clearTimeout(debounceTimer);
+  }, [searchTerm]);
+
   // 검색어에 따른 식품 유형 필터링
   const filteredFoodTypes = useMemo(() => {
     if (!searchTerm) return [];
@@ -7878,13 +7903,20 @@ export default function LabelingStandards() {
             <input
               type="text"
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e) => {
+                    setSearchTerm(e.target.value);
+                    setShowDropdown(true);
+                  }}
+                  onFocus={() => setShowDropdown(true)}
+                  onBlur={() => {
+                    setTimeout(() => setShowDropdown(false), 200);
+                  }}
               placeholder="식품 유형을 입력하세요 (예: 복합조미식품)"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
             />
             
             {/* 드롭다운 결과 */}
-            {searchTerm && filteredFoodTypes.length > 0 && (
+            {showDropdown && searchTerm && filteredFoodTypes.length > 0 && (
               <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-lg shadow-lg mt-1 z-10 max-h-60 overflow-y-auto">
                 {filteredFoodTypes.map((type, index) => (
                   <button
