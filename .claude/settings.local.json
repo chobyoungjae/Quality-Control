@@ -15,7 +15,11 @@
       "Bash(mkdir:*)",
       "Bash(python:*)",
       "Bash(node:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "mcp__taskmaster-ai__initialize_project",
+      "mcp__taskmaster-ai__parse_prd",
+      "mcp__taskmaster-ai__models",
+      "Bash(npm install:*)"
     ],
     "deny": [],
     "ask": []

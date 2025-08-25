@@ -46,20 +46,20 @@ export default function Home() {
 
           {/* 식품공전 규격기준 검색 */}
           <Link
-            href="/food-standards"
+            href="/food-codex"
             className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8"
           >
             <div className="text-center">
-              <div className="text-6xl mb-6">🔍</div>
+              <div className="text-6xl mb-6">📚</div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-orange-600 transition-colors">
-                식품공전 규격기준 검색
+                식품공전 디지털 플랫폼
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                식품공전에서 제공하는<br />
-                공식 규격기준 정보를 검색하세요
+                식품의 기준 및 규격을<br />
+                PDF 원본으로 쉽게 검색하고 열람하세요
               </p>
               <div className="bg-orange-50 text-orange-800 px-4 py-2 rounded-full text-sm font-medium inline-block">
-                검색하기 →
+                식품공전 열람하기 →
               </div>
             </div>
           </Link>

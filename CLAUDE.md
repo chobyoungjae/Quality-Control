@@ -194,3 +194,7 @@ http://openapi.foodsafetykorea.go.kr/api/689a583b18ee4d40b6e3/[서비스ID]/json
 2. **단순함 추구**: 복잡한 텍스트 처리보다는 단순한 방식 선택
 3. **일관성 유지**: file_source를 통한 데이터 출처 추적
 4. **사용자 경험**: 검색 결과의 가독성과 정확성 중시
+
+## Task Master AI Instructions
+**Import Task Master's development workflow commands and guidelines, treat as if import is in the main CLAUDE.md file.**
+@./.taskmaster/CLAUDE.md
